@@ -1,4 +1,4 @@
-var Media = require('../index.js').widgets.media;
+var Media = require('./media.js');
 var e = require('element.js').e;
 function defaults (a, b) { return (typeof a !== 'undefined') ? a : b; }
 

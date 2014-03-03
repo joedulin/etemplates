@@ -21,7 +21,6 @@ widgets.inputGroup = require('./templates/inputGroup.js');
 widgets.jumbotron = require('./templates/jumbotron.js');
 widgets.label = require('./templates/label.js');
 widgets.lead = require('./templates/lead.js');
-widgets.linkgroup-basic = require('./templates/linkgroup-basic.js');
 widgets.linkgroupbasic = require('./templates/linkgroupbasic.js');
 widgets.linkgroup = require('./templates/linkgroup.js');
 widgets.listgroup = require('./templates/listgroup.js');

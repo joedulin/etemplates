@@ -71,6 +71,7 @@ function Table (headings, opts) {
 		} else {
 			self.thead.append(e.th(heading));
 		}
+	};
 	
 	for (var i=0, h; h = headings[i]; i++) {
 		self.addTH(h);

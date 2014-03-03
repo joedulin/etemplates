@@ -13,14 +13,14 @@ function Thumbnail (opts) {
 	self.origAppend = clone(self.append);
 	self.append = function (item) { 
 		self.caption.append(item);
-	}
+	};
 	
-	self.setImage(src, alt) { 
+	self.setImage = function (src, alt) { 
 		src = defaults(src, '#');
 		alt = defaults(alt, '');
 		self.img.attr('src', src);
 		self.img.attr('alt', alt);
-	}
+	};
 	
 	return self;
 }

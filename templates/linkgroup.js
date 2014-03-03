@@ -1,7 +1,7 @@
 var e = require('element.js').e;
 var clone = require('clone');
 var Badge = function () { return e.span([], { classes: ['badge'] }); };
-function defaults (a, b) { return (typeof a !== 'undefined') ? a : b;
+function defaults (a, b) { return (typeof a !== 'undefined') ? a : b; }
 
 function LinkGroup (inner, opts) {
 	inner = defaults(inner, []);
