@@ -1,0 +1,46 @@
+var Element = require('element.js').Element;
+var e = require('element.js').e;
+var widgets = {};
+
+widgets.alert = require('./templates/alert.js');
+widgets.badge = require('./templates/badge.js');
+widgets.breadcrumb = require('./templates/breadcrumb.js');
+widgets.btnGroup = require('./templates/btnGroup.js');
+widgets.btnToolbar = require('./templates/btnToolbar.js');
+widgets.button = require('./templates/button.js');
+widgets.caret = require('./templates/caret.js');
+widgets.carousel = require('./templates/carousel.js');
+widgets.clearfix = require('./templates/clearfix.js');
+widgets.closeIcon = require('./templates/closeIcon.js');
+widgets.col = require('./templates/col.js');
+widgets.dropdown = require('./templates/dropdown.js');
+widgets.form = require('./templates/form.js');
+widgets.icon = require('./templates/icon.js');
+widgets.image = require('./templates/image.js');
+widgets.inputGroup = require('./templates/inputGroup.js');
+widgets.jumbotron = require('./templates/jumbotron.js');
+widgets.label = require('./templates/label.js');
+widgets.lead = require('./templates/lead.js');
+widgets.linkgroup-basic = require('./templates/linkgroup-basic.js');
+widgets.linkgroupbasic = require('./templates/linkgroupbasic.js');
+widgets.linkgroup = require('./templates/linkgroup.js');
+widgets.listgroup = require('./templates/listgroup.js');
+widgets.media = require('./templates/media.js');
+widgets.medialist = require('./templates/medialist.js');
+widgets.modal = require('./templates/modal.js');
+widgets.navbar = require('./templates/navbar.js');
+widgets.nav = require('./templates/nav.js');
+widgets.pageheader = require('./templates/pageheader.js');
+widgets.pager = require('./templates/pager.js');
+widgets.pagination = require('./templates/pagination.js');
+widgets.panel = require('./templates/panel.js');
+widgets.progressbar = require('./templates/progressbar.js');
+widgets.row = require('./templates/row.js');
+widgets.table = require('./templates/table.js');
+widgets.thumbnail = require('./templates/thumbnail.js');
+widgets.well = require('./templates/well.js');
+
+exports.Element = Element;
+exports.e = e;
+exports.widgets = widgets;
+
