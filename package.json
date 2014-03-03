@@ -3,7 +3,10 @@
   "description": "element.js Twitter Bootstrap framework. Objects for each (at least most) of the Bootstrap widgets",
   "version": "0.0.1",
   "author": "Joe Dulin <joe+github@dulinbanjos.com>",
-  "dependencies": {},
+  "dependencies": {
+    "element.js": "git://github.com/joedulin/element.js",
+    "clone": "x"
+  },
   "keywords": [
     "element",
     "web",
