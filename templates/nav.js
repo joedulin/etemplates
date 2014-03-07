@@ -65,12 +65,12 @@ function Nav (inner, opts) {
 	};
 
 	self.setActive = function (index) {
-		this.removeActive();
+		self.removeActive();
 		self.inner[index].addClass('active');
 	};
 
 	self.removeActive = function () {
-		for (var i=0; i<this.body.inner.length; i++) {
+		for (var i=0; i<self.inner.length; i++) {
 			self.inner[i].removeClass('active');
 		}
 	};
