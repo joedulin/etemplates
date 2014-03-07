@@ -77,3 +77,5 @@ function Nav (inner, opts) {
 	
 	return self;
 }
+
+module.exports = Nav;
