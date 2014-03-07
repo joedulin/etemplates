@@ -5,7 +5,8 @@
   "author": "Joe Dulin <joe+github@dulinbanjos.com>",
   "dependencies": {
     "element.js": "git://github.com/joedulin/element.js",
-    "clone": "x"
+    "clone": "x",
+    "node-uuid": "x"
   },
   "keywords": [
     "element",
