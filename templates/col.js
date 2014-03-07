@@ -1,7 +1,11 @@
 var e = require('element.js').e;
+function defaults (a, b) { return (typeof a !== 'undefined') ? a : b; }
 
 function Column (inner, size, offset) {
-	var self = e.div();
+	inner = defaults(inner, []);
+	size = defaults(size, { all: 12 });
+	offset = defaults(offset, {});
+	var self = e.div([ inner ]);
 
 	self.setSize = function (size, num) {
 		if (typeof size === 'object') {
@@ -239,6 +243,9 @@ function Column (inner, size, offset) {
 			}
 		}
 	};
+	
+	self.setSize(size);
+	self.setOffset(offset);
 	
 	return self;
 }
