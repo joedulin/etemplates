@@ -41,5 +41,5 @@ widgets.well = require('./templates/well.js');
 
 exports.Element = Element;
 exports.e = e;
-exports.widgets = widgets;
+exports.w = widgets;
 
