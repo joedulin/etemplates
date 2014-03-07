@@ -62,7 +62,9 @@ function Navbar (brand, content, opts) {
 		attrs: { id: id },
 		classes: [ 'collapse', 'navbar-collapse' ]
 	});
-	self.append([ self.header, self.collapse ]);
+	self.container = e.div([], { classes: [ 'container' ] });
+	self.append(self.container);
+	self.container.append([ self.header, self.collapse ]);
 
 	self.setBrand = function (brand) {
 		self.brand.inner = [];
