@@ -23,13 +23,14 @@ function Modal (heading, content, opts) {
 	self.attr('aria-labelledby', h4id);
 	self.attr('aria-hidden', 'true');
 	self.addClass('modal', 'fade');
-	
+
 	self.title = e.h4(heading, { attrs: {id: h4id }, classes: [ 'modal-title' ] });
-	self.head = e.div([ close(), title ], { classes: [ 'modal-header' ] });
+	self.head = e.div([ close(), self.title ], { classes: [ 'modal-header' ] });
 	self.body = e.div(content, { classes: [ 'modal-body' ] });
 	self.foot = e.div([], { classes: [ 'modal-footer' ] });
+	self.dialog = e.div([ self.head, self.body, self.foot ]);
 
-	self.append([ self.head, self.body, self.foot ]);
+	self.append(self.dialog);
 
 	self.setTitle = function (text) {
 		self.title.inner = [];
