@@ -28,7 +28,8 @@ function Modal (heading, content, opts) {
 	self.head = e.div([ close(), self.title ], { classes: [ 'modal-header' ] });
 	self.body = e.div(content, { classes: [ 'modal-body' ] });
 	self.foot = e.div([], { classes: [ 'modal-footer' ] });
-	self.dialog = e.div([ self.head, self.body, self.foot ]);
+	self.content = e.div([ self.head, self.body, self.foot ], { classes: [ 'modal-content' ] });
+	self.dialog = e.div(self.content, { classes: [ 'modal-dialog' ] });
 
 	self.append(self.dialog);
 
