@@ -1,5 +1,6 @@
 var e = require('element.js').e;
 var uuid = require('node-uuid');
+var clone = require('clone');
 var close = function () {
 	return e.button('&times;', {
 		attrs: {
@@ -45,6 +46,11 @@ function Modal (heading, content, opts) {
 
 	self.removeClose = function () {
 		self.head.inner.shift();
+	};
+
+	self.origAppend = clone(self.append);
+	self.append = function (item) {
+		self.body.append(item);
 	};
 
 	return self;
