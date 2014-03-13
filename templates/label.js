@@ -1,7 +1,7 @@
 var e = require('element.js').e;
 function defaults (a, b) { return (a !== 'undefined') ? a : b; }
 
-function Label (text, type) {
+function Label (text, type, opts) {
 	text = defaults(text, []);
 	type = defaults(type, 'default');
 	var self = e.span(text, opts);
@@ -18,7 +18,7 @@ function Label (text, type) {
 
 	self.setType(type);
 	return self;
-	
+
 }
 
 module.exports = Label;

@@ -1,7 +1,10 @@
 var e = require('element.js').e;
 
-function Button (text, type) {
-	var self = e.button();
+function Button (text, type, opts) {
+	if (opts == null) {
+		opts = {};
+	}
+	var self = e.button(null, opts);
 	self.addClass(['btn','btn-default']);
 
 	self.setType = function (type) {
@@ -45,7 +48,7 @@ function Button (text, type) {
 			self.removeClass('navbar-btn');
 		}
 	};
-	
+
 	if (typeof text !== 'undefined') {
 		self.append(text);
 	}

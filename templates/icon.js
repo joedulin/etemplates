@@ -3,7 +3,6 @@ function defaults (a,b) {
 	return (typeof a !== 'undefined') ? a : b;
 }
 
-
 function Icon (name) {
 	name = defaults(name, 'warning-sign');
 	var self = e.span([], { classes: [ 'glyphicon', 'glyphicon-' + name ] });

@@ -7,7 +7,7 @@ function Panel (title, body, opts) {
 	opts = defaults(opts, {});
 	var self = e.div([],opts);
 	self.addClass([ 'panel', 'panel-default' ]);
-	self.phead = e.div(title, { classes: [ 'panel-heading' ] });
+	self.phead = e.div(e.h4(title), { classes: [ 'panel-heading' ] });
 	self.pbody = e.div(body, { classes: [ 'panel-body' ] });
 	self.append([ self.phead, self.pbody ]);
 
@@ -17,7 +17,7 @@ function Panel (title, body, opts) {
 
 	self.setTitle = function (text) {
 		self.phead.inner = [];
-		self.phead.append(text);
+		self.phead.append(e.h4(text));
 	};
 
 	self.setFooter = function (text) {
