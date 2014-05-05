@@ -5,12 +5,13 @@ function defaults(a, b) { return (typeof a !== 'undefined') ? a : b; }
 function Table (headings, opts) {
 	headings = defaults(headings, []);
 	opts = defaults(opts, {});
-	
+
 	var self = e.table(opts);
 	self.addClass([ 'table', 'table-responsive', 'table-hover' ]);
 	self.thead = e.thead();
 	self.tbody = e.tbody();
 	self.append([ self.thead, self.tbody ]);
+	self.curRow = e.tr();
 
 	self.striped = function (bool) {
 		if (bool) {
@@ -62,7 +63,7 @@ function Table (headings, opts) {
 		}
 	};
 	self.nextRow = function () {
-		self.tbody.append(clone(this.e.curRow));
+		self.tbody.append(clone(self.curRow));
 		self.curRow = e.tr();
 	};
 	self.addTH = function (heading) {
@@ -72,8 +73,12 @@ function Table (headings, opts) {
 			self.thead.append(e.th(heading));
 		}
 	};
-	
+
 	for (var i=0, h; h = headings[i]; i++) {
 		self.addTH(h);
 	}
+
+	return self;
 };
+
+module.exports = Table;

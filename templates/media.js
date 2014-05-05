@@ -3,14 +3,14 @@ function defaults (a, b) { return (typeof a !== 'undefined') ? a : b; }
 
 function Media (opts) {
 	opts = defaults(opts, {});
-	
+
 	var self = e.div([], opts);
-	self.append('media');
-	
+	//self.append('media');
+
 	self.heading = e.h4([], { classes: [ 'media-heading' ] });
 	self.content = e.div([self.heading], { classes: [ 'media-body' ] });
 	self.media = e.a([], '#', { classes: [ 'pull-left' ] });
-	
+
 	self.append([ self.media, self.content ]);
 
 	self.setMedia = function (item) {
@@ -53,7 +53,7 @@ function Media (opts) {
 			this.mediaRight(true);
 		}
 	};
-	
+
 	return self;
 }
 

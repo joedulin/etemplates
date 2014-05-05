@@ -49,6 +49,7 @@ function Modal (heading, content, opts) {
 	};
 
 	self.origAppend = clone(self.append);
+
 	self.append = function (item) {
 		self.body.append(item);
 	};

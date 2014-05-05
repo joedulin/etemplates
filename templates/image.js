@@ -39,6 +39,7 @@ function Image (src, alt, opts) {
 		}
 	};
 	self.setResponsive(true);
+	self.attr('alt', alt);
 	return self;
 }
 

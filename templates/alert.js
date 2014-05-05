@@ -2,9 +2,13 @@ var e = require('element.js').e;
 var clone = require('clone');
 function ia(arr) { return Array.isArray(arr); }
 
-function Alert (item) {
-	var self = e.div([], { classes: [ 'alert', 'alert-info' ] });
-	
+function Alert (item, type, opts) {
+	if (typeof item === 'undefined') { item = []; }
+	if (typeof type === 'undefined') { type = 'info'; }
+	if (typeof opts === 'undefined') { opts = {}; }
+
+	var self = e.div(item, opts);
+
 	self.setType = function (type) {
 		self.removeClass([ 'alert-success', 'alert-info', 'alert-warning', 'alert-danger' ]);
 		self.addClass('alert-'+type);
@@ -32,11 +36,10 @@ function Alert (item) {
 			self.app(item);
 		}
 	};
-	
-	if (typeof item !== 'undefined') {
-		self.append(item);
-	}
-	
+
+	self.addClass('alert');
+	self.setType(type);
+
 	return self;
 }
 
